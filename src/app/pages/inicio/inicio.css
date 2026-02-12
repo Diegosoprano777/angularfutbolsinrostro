@@ -1,0 +1,93 @@
+.inicio {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.banner {
+  background-color: #bdbdbd;
+  color: white;
+  font-size: 22px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 70%;
+  margin: 0 auto 40px auto;
+  letter-spacing: 1px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 800px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 5px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.play-button:hover {
+  opacity: 1;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  color: #1e40af;
+}
+
+/* Indicadores */
+.dots {
+  margin-top: 20px;
+}
+
+.dots span {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dots span.active {
+  background-color: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner {
+    width: 95%;
+    font-size: 18px;
+  }
+}

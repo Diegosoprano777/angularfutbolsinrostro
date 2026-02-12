@@ -1,0 +1,39 @@
+<nav class="navbar">
+  <div class="logo">FUTBOL SIN ROSTRO</div>
+  <ul class="nav-links">
+    <li><a href="#">inicio</a></li>
+    <li><a href="#">noticias</a></li>
+    <li><a href="#">partidos</a></li>
+    <li><a href="#">nosotros</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <div class="news-grid">
+    
+    <div class="card" *ngFor="let noticia of noticias">
+      <div class="image-wrapper">
+        <img [src]="noticia.img" [alt]="noticia.titulo">
+      </div>
+      <button class="btn-news" (click)="abrirNoticia(noticia)">NOTICIAS</button>
+    </div>
+
+  </div>
+</main>
+
+<div class="modal-overlay" *ngIf="noticiaSeleccionada" (click)="cerrarNoticia()">
+  
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="cerrarNoticia()">&times;</button>
+    
+    <div class="modal-body">
+      <img [src]="noticiaSeleccionada.img" class="modal-img">
+      <h2>{{ noticiaSeleccionada.titulo }}</h2>
+      <hr>
+      <p>{{ noticiaSeleccionada.resumen }}</p>
+      
+      <button class="btn-news" (click)="cerrarNoticia()">ENTENDIDO</button>
+    </div>
+  </div>
+
+</div>

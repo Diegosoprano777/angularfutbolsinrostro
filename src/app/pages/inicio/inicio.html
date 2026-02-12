@@ -1,0 +1,33 @@
+<section class="inicio">
+
+  <div class="banner">
+    BIENVENIDO AL MEJOR DEPORTE QUE NOS UNE
+  </div>
+
+  <div class="carousel-container">
+
+    <button class="arrow left" (click)="anterior()">
+      &#10094;
+    </button>
+
+    <div class="image-wrapper">
+      <img [src]="imagenes[indiceActual]" alt="Futbol">
+
+    </div>
+
+    <button class="arrow right" (click)="siguiente()">
+      &#10095;
+    </button>
+
+  </div>
+
+  <!-- Indicadores -->
+  <div class="dots">
+    <span
+      *ngFor="let img of imagenes; let i = index"
+      [class.active]="i === indiceActual"
+      (click)="irA(i)">
+    </span>
+  </div>
+
+</section>

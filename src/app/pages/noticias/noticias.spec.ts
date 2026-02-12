@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FooterComponent } from './footer';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+import { Noticias } from './noticias';
+
+describe('Noticias', () => {
+  let component: Noticias;
+  let fixture: ComponentFixture<Noticias>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FooterComponent] // porque es standalone
+      imports: [Noticias]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(Noticias);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
